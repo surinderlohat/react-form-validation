@@ -20,6 +20,7 @@ yarn add @surinderlohat/lohat-from-validation
 ### Field Methods
  Note: we can get any specific field using form.getField('userName')
 all methods are available like: form.getField('userName').hasChanges
+
 | Method | TYPE | RETURN VALUE | 
 | ------ | ------ | ------ |
 | hasChanges | Getter | Return field state i.e it's changed or not |
