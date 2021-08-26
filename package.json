@@ -1,8 +1,8 @@
 {
   "name": "lohat-from-validation",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
-  "homepage": "https://surinderlohat.github.io",
+  "homepage": "http://surinderlohat.github.io/lohat-from-validation",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
