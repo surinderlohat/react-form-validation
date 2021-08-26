@@ -30,7 +30,7 @@ all methods are available like: form.getField('userName').hasChanges
 ## How to use
 ```sh
 import { FieldObject, useLohatForm } from '@surinderlohat/lohat-from-validation';
-const field: FieldObject = {
+const fields: FieldObject = {
   userName: {
     label: 'UserName',
     value: '123',
@@ -48,7 +48,7 @@ const field: FieldObject = {
 };
 
 function FormValidation() {
-  const form = useLohatForm(field);
+  const form = useLohatForm(fields);
   return (
     <div className="App">
       <form>
@@ -73,7 +73,6 @@ function FormField({ field }: Props) {
 
 ## Live working Link
 https://codesandbox.io/embed/sleepy-napier-ci2lg
-https://surinderlohat.github.io/lohat-from-validation/
 
 ## API Documentation
 https://surinderlohat.github.io/lohat-from-validation/
