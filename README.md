@@ -28,18 +28,24 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 ### Form Helping Methods
 #### Note: all methods are available like: form.onSubmit()
 
-| Method | PARAMS| RETURN VALUE |
-| ------ | ------ | ------ |
+| Method | PARAMS| DESCRIPTION |
+| ------ | ------ |------ |
+| resetToDefault |No | Reset form state to default All fields will be reset to the default state |
+| getField | fieldKey i.e name or user.name if nested field | Return the specific field instance |
+| getChangedFields | No | Return fields with initial value and changed value |
+| clearForm | No | Clear form values and all nested childs |
 | onSubmit | No | Return from values and error state |
-| getValues | No | Return form values in same order we have pass |
-| getErrors | No | Display all errors for each nested field |
-| resetToDefault |No |Reset form state to default All fields will be reset to the default state |
-| getField | fieldKey |Return the specific field from the form|
+
+
+### Form Helping Getter
+| Name | RETURN Type | RETURN VALUE |
+| ------ | ------ |------ |
+| getValues | object | Return form values in same order we have pass |
+| getErrors | object | Display all errors for each nested field |
+| hasChanges | boolean | Return true if any field has changes |
+
 
 ### Field Methods
- Note: we can get any specific field using form.getField('userName')
-all methods are available like: form.getField('userName').hasChanges
-
 | Method | TYPE | RETURN VALUE | 
 | ------ | ------ | ------ |
 | hasChanges | Getter | Return field state i.e it's changed or not |
@@ -118,8 +124,8 @@ https://codesandbox.io/s/lohat-react-form-validation-o216l
 #### Setup custom error message using form instance
 https://codesandbox.io/s/lohat-react-form-validation-forked-ctejo
 
-#### Nested form fields
- --Example incule getValues() and getErrors() for specific nested field
+#### Nested form fields : Example incule getValues() and getErrors() for specific nested field
+
 https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
 
 
