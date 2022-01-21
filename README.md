@@ -1,7 +1,7 @@
 # Lohat Form validation
 
-Lohat Form validation is a form validation solution for react JS, it's super easy to use, Can configure to match all the major user cases.
-This library is based on the react hooks and reactive programing. 
+Form validation solution for react JS, super easy to use and can handel all the major user cases.
+##### Based on the React hooks and reactive programing.
 #### No extra dependencies pure react js code & lightweight.
 
 ## Featuers
@@ -108,8 +108,6 @@ function FormField({ field }: Props) {
 
 ### Basic validation
 https://codesandbox.io/embed/sleepy-napier-ci2lg
-
-
 
 ## License
 MIT **Free Software!**
