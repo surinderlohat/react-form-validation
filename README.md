@@ -18,11 +18,11 @@ Form validation solution for react JS, super easy to use and can handel all the 
 
 ## Installation
 ```sh
-npm install @surinderlohat/react-form-validation
-yarn add @surinderlohat/react-form-validation
+npm install @surinderlohat/lohat-react-form-validation
+yarn add @surinderlohat/lohat-react-form-validation
 ```
 ## API Documentation
-https://surinderlohat.github.io/react-form-validation/
+https://surinderlohat.github.io/lohat-react-form-validation/
 
 ### Form Helping Methods
 #### Note: all methods are available like: form.onSubmit()
@@ -48,7 +48,7 @@ all methods are available like: form.getField('userName').hasChanges
 
 ## How to use
 ```sh
-import { FieldObject, useLohatForm } from '@surinderlohat/react-form-validation';
+import { FieldObject, useLohatForm } from '@surinderlohat/lohat-react-form-validation';
 const fields: FieldObject = {
   firstName: {
     label: 'First Name',
