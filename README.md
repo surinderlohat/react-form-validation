@@ -141,9 +141,8 @@ https://codesandbox.io/s/lohat-react-form-validation-forked-ctejo
 #### Nested form fields : Example incule getValues() and getErrors() for specific nested field
 https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
 
-[#### Custom validation logic
-https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
-](url)
+#### Custom validation using customValidation function
+https://codesandbox.io/s/lohat-react-form-validation-forked-8sv0x
 
 ## License
 MIT **Free Software!**
