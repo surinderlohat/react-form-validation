@@ -112,8 +112,17 @@ function FormField({ field }: Props) {
 
 ## Live working Examples
 
-### Basic validation
-https://codesandbox.io/embed/sleepy-napier-ci2lg
+#### Basic validation with email validation
+https://codesandbox.io/s/lohat-react-form-validation-o216l
+
+#### Setup custom error message using form instance
+https://codesandbox.io/s/lohat-react-form-validation-forked-ctejo
+
+#### Nested form fields
+ --Example incule getValues() and getErrors() for specific nested field
+https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
+
+
 
 ## License
 MIT **Free Software!**
