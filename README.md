@@ -50,8 +50,22 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 | ------ | ------ | ------ |
 | hasChanges | Getter | Return field state i.e it's changed or not |
 | hasError | Getter | Return error state of the specific field |
-| errorMessage|Getter| Return error message for current field |
-| setValue |Function| Set value of specific field 
+| errorMessage| Getter| Return error message for current field from |
+| setValue | Function | Set value of specific field |
+| getValue | Function | Get value of specific field |
+| setError | Function | Set custom error message on specific field |
+| customValidation | (field: IFieldProps, form: LohatForm) | return error message with from custom logic | ;
+
+### Rules 
+##### More will added soon
+``` sh
+ min?: number; // min value
+ max?: number; // max value
+ required?: boolean; // make field required
+ regExp?: RegExp; // pass any custom regex validation
+ isEmail?: boolean; // validate email address
+ same?: string; // provide key to match value
+```
 
 ## How to use
 ```sh
@@ -125,10 +139,11 @@ https://codesandbox.io/s/lohat-react-form-validation-o216l
 https://codesandbox.io/s/lohat-react-form-validation-forked-ctejo
 
 #### Nested form fields : Example incule getValues() and getErrors() for specific nested field
-
 https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
 
-
+[#### Custom validation logic
+https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
+](url)
 
 ## License
 MIT **Free Software!**
