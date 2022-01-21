@@ -37,7 +37,7 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 | onSubmit | No | Return from values and error state |
 
 
-### Form Helping Getter
+### Form Getters
 | Name | RETURN Type | RETURN VALUE |
 | ------ | ------ |------ |
 | getValues | object | Return form values in same order we have pass |
