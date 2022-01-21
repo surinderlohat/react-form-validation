@@ -54,7 +54,7 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 | setValue | Function | Set value of specific field |
 | getValue | Function | Get value of specific field |
 | setError | Function | Set custom error message on specific field |
-| customValidation | (field: IFieldProps, form: LohatForm) | return error message with from custom logic | ;
+| customValidation | (field: IFieldProps, form: LohatForm) | return error message with from custom logic [Click Me](https://github.com/surinderlohat/lohat-react-form-validation/blob/37d74c54b6cbce517c507e9992401fc415147ade/README.md?plain=1#L145) |
 
 ### Rules 
 ##### More will added soon
