@@ -19,6 +19,7 @@ Form validation solution for react JS, super easy to use and can handel all the 
 ## Installation
 ```sh
 npm install @surinderlohat/lohat-react-form-validation
+or
 yarn add @surinderlohat/lohat-react-form-validation
 ```
 ## API Documentation
