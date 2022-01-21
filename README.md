@@ -38,19 +38,19 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 
 
 ### Form Getters
-| Name | RETURN | RETURN VALUE |
-| ------ | ------ |------ |
-| getValues | object | Return form values in same order we have pass |
-| getErrors | object | Display all errors for each nested field |
-| hasChanges | boolean | Return true if any field has changes |
+| Name | RETURN VALUE |
+| ------ | ------ |
+| getValues | Return form values in same order we have pass |
+| getErrors | Display all errors for each nested field |
+| hasChanges | Return true if any field has changes |
 
 
 ### Field Methods
-| Method | TYPE | RETURN VALUE | 
+| Method | TYPE | RETURN | 
 | ------ | ------ | ------ |
 | hasChanges | Getter | Return field state i.e it's changed or not |
 | hasError | Getter | Return error state of the specific field |
-| errorMessage| Getter| Return error message for current field from |
+| errorMessage | Getter| Return error message for current field from |
 | setValue | Function | Set value of specific field |
 | getValue | Function | Get value of specific field |
 | setRules | (newRules: Rules) | Update field rules on the fly |
