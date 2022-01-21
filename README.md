@@ -33,7 +33,7 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 | resetToDefault |No | Reset form state to default All fields will be reset to the default state |
 | getField | fieldKey i.e name or user.name if nested field | Return the specific field instance |
 | getChangedFields | No | Return fields with initial value and changed value |
-| clearForm | No | Clear form values and all nested childs |
+| clearForm | No | Clear form values and all nested child's |
 | onSubmit | No | Return from values and error state |
 
 
@@ -138,7 +138,7 @@ https://codesandbox.io/s/lohat-react-form-validation-o216l
 #### Setup custom error message using form instance
 https://codesandbox.io/s/lohat-react-form-validation-forked-ctejo
 
-#### Nested form fields : Example incule getValues() and getErrors() for specific nested field
+#### Nested form fields : Example include getValues() and getErrors() for specific nested field
 https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
 
 #### Custom validation using customValidation function
