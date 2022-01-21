@@ -4,7 +4,7 @@ Form validation solution for react JS, super easy to use and can handel all the 
 ##### Based on the React hooks and reactive programing.
 #### No extra dependencies pure react js code & lightweight.
 
-## Featuers
+## Features
 1. Easy validations solution for react js.
 2. Regex validations.
 3. Custom validations.
