@@ -1,4 +1,4 @@
-# Lohat Form validation
+# Lohat React Form validation
 
 Form validation solution for react JS, super easy to use and can handel all the major user cases.
 ##### Based on the React hooks and reactive programing.
