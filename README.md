@@ -28,17 +28,17 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 ### Form Helping Methods
 #### Note: all methods are available like: form.onSubmit()
 
-| Method | PARAMS| DESCRIPTION |
+| Method | PARAMS | DESCRIPTION |
 | ------ | ------ |------ |
-| resetToDefault |No | Reset form state to default All fields will be reset to the default state |
-| getField | fieldKey i.e name or user.name if nested field | Return the specific field instance |
+| resetToDefault | No | Reset form state to default All fields will be reset to the default state |
+| getField | fieldKey example - name or user.name if nested field | Return the specific field instance |
 | getChangedFields | No | Return fields with initial value and changed value |
 | clearForm | No | Clear form values and all nested child's |
 | onSubmit | No | Return from values and error state |
 
 
 ### Form Getters
-| Name | RETURN Type | RETURN VALUE |
+| Name | RETURN | RETURN VALUE |
 | ------ | ------ |------ |
 | getValues | object | Return form values in same order we have pass |
 | getErrors | object | Display all errors for each nested field |
