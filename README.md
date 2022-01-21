@@ -34,7 +34,7 @@ https://surinderlohat.github.io/lohat-react-form-validation/
 | getValues | No | Return form values in same order we have pass |
 | getErrors | No | Display all errors for each nested field |
 | resetToDefault |No |Reset form state to default All fields will be reset to the default state |
-| getField | fieldKey |used to get the specific field from the form|
+| getField | fieldKey |Return the specific field from the form|
 
 ### Field Methods
  Note: we can get any specific field using form.getField('userName')
@@ -72,6 +72,11 @@ const fields: FieldObject = {
   email: {
     label: 'Email',
     value: 'test@domain.com',
+    rules: {
+      isEmail: true,
+      min: 2,
+      max: 10,
+    },
   },
 };
 
@@ -95,7 +100,7 @@ function FormField({ field }: Props) {
   return (
     <TextField
       {...field.bind()} // find input methods to input i.e onChange, onBlur, onFocus
-      label={field.startLabel}
+      label={field.starLabel}
       error={field.hasError}
       helperText={field.errorMessage}
       variant="filled"
