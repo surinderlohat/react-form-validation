@@ -1,4 +1,4 @@
-# Lohat React Form validation
+# React Form validation
 
 Form validation solution for react JS, super easy to use and can handel all the major user cases.
 ##### Based on the React hooks and reactive programing.
@@ -18,12 +18,12 @@ Form validation solution for react JS, super easy to use and can handel all the 
 
 ## Installation
 ```sh
-npm install @surinderlohat/lohat-react-form-validation
+npm install @surinderlohat/react-form-validation
 or
-yarn add @surinderlohat/lohat-react-form-validation
+yarn add @surinderlohat/react-form-validation
 ```
 ## API Documentation
-https://surinderlohat.github.io/lohat-react-form-validation/
+https://surinderlohat.github.io/react-form-validation/
 
 ### Form Helping Methods
 #### Note: all methods are available like: form.onSubmit()
