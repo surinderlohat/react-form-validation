@@ -48,13 +48,13 @@ https://surinderlohat.github.io/react-form-validation/
 | ------ | ------ | ------ |
 | hasChanges | Getter | Return field state i.e it's changed or not |
 | hasError | Getter | Return error state of the specific field |
+| isTouched | Getter | if field is touched or not
 | errorMessage| Getter| Return error message for current field from |
 | setValue | Function | Set value of specific field |
 | getValue | Function | Get value of specific field |
 | setRules | (newRules: Rules) | Update field rules on the fly |
 | setError | Function | Set custom error message on specific field |
-| customValidation | (field: IFieldProps, form: LohatForm) | return error message with from custom logic [Click Me](https://github.com/surinderlohat/react-form-validation/blob/37d74c54b6cbce517c507e9992401fc415147ade/README.md?plain=1#L145) |
-
+| showErrors | Function | Show error without touching the fields |
 ### Rules 
 ``` sh
 Rules 
