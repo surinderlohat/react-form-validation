@@ -5,16 +5,14 @@ Form validation solution for react JS, super easy to use and can handel all the 
 #### No extra dependencies pure react js code & lightweight.
 
 ## Features
-1. Easy validations solution for react js.
+1. Easy validations solution for react js pure react js no extra dependency.
 2. Regex validations.
 3. Custom validations.
 4. Email validations.
 5. Many useful form helping methods i.e hasError, hasChanges, isTouched, getValues, getErrors.
 6. Easy to configure.
-7. Support complex user cases.
-8. Nested form fields validations.
-9. Dynamic add/remove fields.
-10. Open source Free to use.
+7. Nested form fields validations.
+8. Dynamic add/remove fields.
 
 ## Installation
 ```sh
@@ -55,95 +53,82 @@ https://surinderlohat.github.io/react-form-validation/
 | getValue | Function | Get value of specific field |
 | setRules | (newRules: Rules) | Update field rules on the fly |
 | setError | Function | Set custom error message on specific field |
-| customValidation | (field: IFieldProps, form: LohatForm) | return error message with from custom logic [Click Me](https://github.com/surinderlohat/lohat-react-form-validation/blob/37d74c54b6cbce517c507e9992401fc415147ade/README.md?plain=1#L145) |
+| customValidation | (field: IFieldProps, form: LohatForm) | return error message with from custom logic [Click Me](https://github.com/surinderlohat/react-form-validation/blob/37d74c54b6cbce517c507e9992401fc415147ade/README.md?plain=1#L145) |
 
 ### Rules 
-##### More will added soon
 ``` sh
- min?: number; // min value
- max?: number; // max value
- required?: boolean; // make field required
- regExp?: RegExp; // pass any custom regex validation
- isEmail?: boolean; // validate email address
- same?: string; // provide key to match value
+Rules 
+    /* Used to identify which rule we are going to use for a field*/
+    rule: 'min' | 'max' | 'required' | 'same' | 'email' | 'regex' | 'custom' | 'between' | 'range';
+    /* Rule value used to provide value in rule i.e for min:2 max:10 rule value ruleValue will be ruleValue:2 or 5 
+    ruleValue?: any;
+    /* Used to provide custom message for each rule */
+    message?: string;
+    /* For special cases if we need custom validation then this method will help */
+    validation?: (field: IField, form?: ReactForm) => string;
 ```
 
 ## How to use
 ```sh
-import { FieldObject, useLohatForm } from '@surinderlohat/lohat-react-form-validation';
-const fields: FieldObject = {
-  firstName: {
-    label: 'First Name',
-    value: 'Surinder',
-    rules: {
-      required: true,
-      min: 2,
-      max: 10,
-    },
-  },
- lastName: {
-    label: 'Last Name',
-    value: 'Singh',
-    rules: {
-      required: true,
-      min: 2,
-      max: 10,
-    },
+import { IFieldObject, useReactForm } from '@surinderlohat/react-form-validation';
+import FormField from '../FormField/FormField';
+import { Box, Typography, Button, Paper } from '@mui/material';
+import { FC } from 'react';
+
+// Fields Rules
+const field: IFieldObject = {
+  name: {
+    label: 'User Name',
+    placeholder: 'Enter your Name',
+    rules: [{ rule: 'required' }],
   },
   email: {
     label: 'Email',
-    value: 'test@domain.com',
-    rules: {
-      isEmail: true,
-      min: 2,
-      max: 10,
-    },
+    placeholder: 'Enter your email',
+    rules: [{ rule: 'email', message: 'Email is not valid' }],
+  },
+  password: {
+    label: 'Password',
+    rules: [{ rule: 'required', message: 'This field is required' }],
+  },
+  confirmPassword: {
+    label: 'Confirm Password',
+    rules: [{ rule: 'required' }, { rule: 'same', ruleValue: 'password', message: 'Should be same as Password' }],
   },
 };
 
-function FormValidation() {
-  const form = useLohatForm(fields);
+const BasicExample: FC = () => {
+  const form = useReactForm(field);
   return (
-    <div className="App">
-      <form>
-        <FormField field={form.getField('firstName')} />
-        <FormField field={form.getField('lastName')} />
-        <FormField field={form.getField('email')} />
-        <Button onClick={()=>form.getValues()}>
-        Save Changes
+    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+      <Paper sx={{ width: '350px', padding: '15px', display: 'grid', gridGap: '15px' }}>
+        <Typography variant="h5">Basic Signup Validations</Typography>
+        {Object.keys(field).map(key => (
+          <FormField key={key} field={form.getField(key)} />
+        ))}
+        <Button onClick={() => console.log(form.getValues())} disabled={form.hasError} variant="contained">
+          Save Changes
         </Button>
-      </form>
-    </div>
+        <Typography>Has Changes: {`${form.hasChanges}`}</Typography>
+        <Typography>Has hasError: {`${form.hasError}`}</Typography>
+        <Button onClick={() => form.showErrors()} variant="contained">
+          Show Errors
+        </Button>
+      </Paper>
+    </Box>
   );
-}
+};
 
-function FormField({ field }: Props) {
-  return (
-    <TextField
-      {...field.bind()} // find input methods to input i.e onChange, onBlur, onFocus
-      label={field.starLabel}
-      error={field.hasError}
-      helperText={field.errorMessage}
-      variant="filled"
-    />
-  );
-}
+export default BasicExample;
 
 ```
 
 ## Live working Examples
+Coming Soon...
 
-#### Basic validation with email validation
-https://codesandbox.io/s/lohat-react-form-validation-o216l
+Like this package ? show some love by start this repo
 
-#### Setup custom error message using form instance
-https://codesandbox.io/s/lohat-react-form-validation-forked-ctejo
-
-#### Nested form fields : Example include getValues() and getErrors() for specific nested field
-https://codesandbox.io/s/lohat-react-form-validation-forked-tzmn3
-
-#### Custom validation using customValidation function
-https://codesandbox.io/s/lohat-react-form-validation-forked-8sv0x
+For more packages like this please checkout: https://github.com/surinderlohat
 
 ## License
 MIT **Free Software!**
